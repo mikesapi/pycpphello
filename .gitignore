@@ -1,0 +1,4 @@
+*build
+*install
+*.tags
+*__pycache__

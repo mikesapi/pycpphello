@@ -1,0 +1,31 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+LIST(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+ADD_COMPILE_OPTIONS(-std=c++11 -Wall -fPIC)
+
+## This is useful for linter to find include paths ##
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# SWIG: use standard target name.
+if(POLICY CMP0078)
+  cmake_policy(SET CMP0078 NEW)
+endif()
+
+# SWIG: use SWIG_MODULE_NAME property.
+if(POLICY CMP0086)
+  cmake_policy(SET CMP0086 NEW)
+endif()
+
+PROJECT(pycpphello)
+
+OPTION(BUILD_PYTHON "Build Python Library" ON)
+MESSAGE(STATUS "Build Python: ${BUILD_PYTHON}")
+
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/build/bin")
+
+IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  SET(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install CACHE PATH "" FORCE)
+ENDIF()
+
+ADD_SUBDIRECTORY(pycpphello)
+INCLUDE(python)
