@@ -4,9 +4,9 @@ import argparse
 import logging
 import sys
 
-# import pyDummy
-from pycpphello.foo.Foo import Foo
 from pycpphello.dummy import pyDummy
+from pycpphello.foo.Foo import Foo
+
 
 def main() -> None:
     """Simple Hello World Python script."""
