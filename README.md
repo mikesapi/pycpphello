@@ -42,11 +42,11 @@ Run the build/install script.
 
 Check your code.
 ```
-$ flake8 main.py
+$ flake8 pycpphello main.py
 ```
 or
 ```
-$ pytest --flake8 main.py
+$ pytest --flake8 pycpphello main.py
 ```
 
 Run it.
