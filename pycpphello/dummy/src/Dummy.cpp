@@ -4,9 +4,9 @@
 
 namespace dummy {
 
-void dummy_hello(int level)
+void Dummy::hello(int dummy_value)
 {
-  std::cout << "Hello world CPP from Dummy: " << level << std::endl;
+  std::cout << "Hello world CPP from Dummy: " << dummy_value << std::endl;
 }
 
 }

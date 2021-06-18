@@ -3,5 +3,5 @@ import logging
 class Foo():
 
     @staticmethod
-    def foo_hello(level: int) -> None:
-        logging.info(f"Hello World Python from Foo {level}")
+    def hello(foo_value: int) -> None:
+        logging.info(f"Hello World Python from Foo {foo_value}")

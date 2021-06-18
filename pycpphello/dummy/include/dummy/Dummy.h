@@ -3,13 +3,11 @@
 
 namespace dummy {
 
-void dummy_hello(int level);
-
-// class Dummy
-// {
-// public:
-//   static int multiply(int x, int y);
-// };
+class Dummy
+{
+public:
+  static void hello(int dummy_value);
+};
 
 }
 

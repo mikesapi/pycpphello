@@ -19,8 +19,8 @@ def main() -> None:
     logger.addHandler(logging.StreamHandler(sys.stdout))
 
     m = int(args.magic_number)
-    pyDummy.dummy_hello(m)
-    Foo.foo_hello(m)
+    pyDummy.Dummy.hello(m)
+    Foo.hello(m)
 
 
 if __name__ == "__main__":
